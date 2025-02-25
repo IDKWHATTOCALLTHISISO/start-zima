@@ -28,4 +28,5 @@ mkdir templates
 cd templates
 curl https://raw.githubusercontent.com/IDKWHATTOCALLTHISISO/py/refs/heads/main/index.html -O
 cd ../..
+sudo nano /etc/hosts
 echo "I am finished doing stuff"
