@@ -18,15 +18,8 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash
-mkdir file
-curl https://raw.githubusercontent.com/IDKWHATTOCALLTHISISO/py/refs/heads/main/app.py -O
-mkdir static
-cd static
-mkdir files
-cd ..
-mkdir templates
-cd templates
-curl https://raw.githubusercontent.com/IDKWHATTOCALLTHISISO/py/refs/heads/main/index.html -O
-cd ../..
+mkdir -p file static/files templates
+curl https://raw.githubusercontent.com/IDKWHATTOCALLTHISISO/py/refs/heads/main/app.py -o file/app.py
+curl https://raw.githubusercontent.com/IDKWHATTOCALLTHISISO/py/refs/heads/main/index.html -o file/templates/index.html
 sudo nano /etc/hosts
 echo "I am finished doing stuff"
