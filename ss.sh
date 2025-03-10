@@ -3,6 +3,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y openssh-server
 sudo systemctl enable --now ssh
 sudo hostnamectl set-hostname zima.local
+sudo apt install gnome-terminal
+sudo apt install fzf chafa
+curl -fsSL https://get.casaos.io | sudo bash
 
 echo "Installing Conky..."
 sudo apt update && sudo apt install -y conky-all
@@ -55,6 +58,3 @@ echo "Starting Conky..."
 
 echo "Conky setup complete! It will now run on startup."
 
-sudo apt install fzf chafa
-
-curl -fsSL https://get.casaos.io | sudo bash
